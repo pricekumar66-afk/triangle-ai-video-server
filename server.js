@@ -19,7 +19,7 @@ if (!ACCESS_TOKEN) {
 return res.status(500).json({ error: "Server token not configured" });
 }
 
-if (req.headers.authorization !== Bearer ${ACCESS_TOKEN}) {
+if (req.headers.authorization !== `Bearer ${ACCESS_TOKEN}`) {
 return res.status(401).json({ error: "Unauthorized" });
 }
 
